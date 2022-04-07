@@ -66,10 +66,13 @@ extension PhotoEditorViewController {
             context.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
             context.addLine(to: CGPoint(x: toPoint.x, y: toPoint.y))
             // 3
-            context.setLineCap( CGLineCap.round)
+            context.setLineCap( CGLineCap.butt)
             // TODO@Nikonets: test brush size width
-            context.setLineWidth(50.0)
-            context.setStrokeColor(drawColor.cgColor)
+            context.setLineWidth(12.0)
+
+            let red = UIColor(red: 100.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 0.5)
+
+            context.setStrokeColor(red.CGColor)
             context.setBlendMode( CGBlendMode.normal)
             // 4
             context.strokePath()
