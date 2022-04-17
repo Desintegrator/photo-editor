@@ -60,6 +60,7 @@ public final class PhotoEditorViewController: UIViewController {
     var textColor: UIColor = UIColor.white
     var isDrawing: Bool = false
     var lastPoint: CGPoint!
+    var firstPoint: CGPoint!
     var swiped = false
     var lastPanPoint: CGPoint?
     var lastTextViewTransform: CGAffineTransform?

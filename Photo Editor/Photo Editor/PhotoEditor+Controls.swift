@@ -60,7 +60,7 @@ extension PhotoEditorViewController {
         
         textView.textAlignment = .center
         textView.font = UIFont(name: "Helvetica", size: 30)
-        textView.textColor = textColor
+        textView.textColor = textColor // TODO@Nikonets use selected color
         textView.layer.shadowColor = UIColor.black.cgColor
         textView.layer.shadowOffset = CGSize(width: 1.0, height: 0.0)
         textView.layer.shadowOpacity = 0.2
@@ -69,6 +69,7 @@ extension PhotoEditorViewController {
         textView.autocorrectionType = .no
         textView.isScrollEnabled = false
         textView.delegate = self
+        textView.text = "Текст"
         self.canvasImageView.addSubview(textView)
         addGestures(view: textView)
         textView.becomeFirstResponder()
